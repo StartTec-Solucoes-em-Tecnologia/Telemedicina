@@ -1,5 +1,5 @@
 .grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
   /* grid-auto-rows: 330px; */
   justify-content: center;
@@ -49,7 +49,7 @@
 .video-active {
   width: 100%;
   background-color: #fefefe;
-  height: 300px;
+  height: 200px;
 }
 
 .iconsDiv {

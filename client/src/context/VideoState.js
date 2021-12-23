@@ -220,6 +220,8 @@ const VideoState = ({ children }) => {
       } else if (elem.msRequestFullscreen) {
         /* IE/Edge */
         elem.msRequestFullscreen();
+      } else {
+        return
       }
     };
 

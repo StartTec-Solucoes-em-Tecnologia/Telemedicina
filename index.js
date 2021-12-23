@@ -33,6 +33,10 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("updateUserMedia", { type, currentMediaStatus });
   });
 
+  socket.on("msgUser", ({ name, to, msg, sender }) => {
+    io.to(to).emit("msgRcv", { name, msg, sender });
+  });
+
   socket.on("answerCall", (data) => {
     socket.broadcast.emit("updateUserMedia", {
       type: data.type,
