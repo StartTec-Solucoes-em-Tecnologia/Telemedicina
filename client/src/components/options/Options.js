@@ -12,7 +12,6 @@ import {
   InfoCircleOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
-import { Url } from "../../utils/Url";
 
 const Options = () => {
   const [idToCall, setIdToCall] = useState("");
@@ -78,7 +77,7 @@ const Options = () => {
         />
 
         <div className={classes.share_options}>
-          <CopyToClipboard text={`${Url}?a=${me}`}>
+          <CopyToClipboard text={`${window.location.origin}/client?a=${me}`}>
             <Button
               type="primary"
               icon={<CopyOutlined />}

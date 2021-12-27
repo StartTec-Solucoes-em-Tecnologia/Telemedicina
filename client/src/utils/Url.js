@@ -1,1 +1,0 @@
-export const Url = "localhost:3000/client" //Local
