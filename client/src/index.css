@@ -1,9 +1,11 @@
 @font-face {
   font-family: Gilroy;
+  font-weight: bold;
   src: url(./assests/gilroy.otf);
 }
 @font-face {
-  font-family: gilroy-light;
+  font-family: Gilroy;
+  font-weight: normal;
   src: url(./assests/Gilroy-Light.otf);
 }
 *,
