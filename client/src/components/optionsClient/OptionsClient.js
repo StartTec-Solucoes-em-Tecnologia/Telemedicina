@@ -67,6 +67,9 @@ const OptionsClient = () => {
 
   return (
     <div className={classes.options}>
+      <div style={{fontWeight: "lighter"}}>
+        <p>Prezado paciente, favor checar a <b>estabilidade da sua internet</b>, permitir o <b>uso de câmera</b>, <b>som</b>, <b>microfone</b> e estar em um <b>ambiente silencioso</b>.</p>
+      </div>
       <div style={{ marginBottom: "0.5rem" }}>
         <h2>Nome</h2>
         <Input
