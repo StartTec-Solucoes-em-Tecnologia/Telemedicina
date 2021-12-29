@@ -10,7 +10,7 @@ const HomeClient = () => {
   useEffect(() => {
     if (!navigator.onLine) alert("Connect to internet!");
   }, [navigator]);
- 
+
  useEffect(()=>{
     var cookies = document.cookie.split(";");
 
@@ -25,7 +25,7 @@ const HomeClient = () => {
     <VideoState>
       <div className="App" style={{ height: "100%", width: "100%",}}>
         <div className="logo">
-          <image src="logo-sm.png" />
+          <img src="/logo-sm.png" />
         </div>
         <Video />
         <OptionsClient />

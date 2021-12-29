@@ -20,12 +20,15 @@ body {
 }
 
 .logo {
-  position: absolute;
-  left: 45vw;
+  padding: 0 1rem;
+  height: 40px;
 }
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .logo {
-    left:40vw
+    text-align: center;
+    height: 60px;
   }
 }
-
+.logo img {
+  height: 100%;
+}
