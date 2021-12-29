@@ -21,6 +21,10 @@ body {
   background-color: #fff !important;
 }
 
+b, strong {
+  font-weight: bold !important;
+}
+
 .logo {
   padding: 0 1rem;
   height: 40px;
