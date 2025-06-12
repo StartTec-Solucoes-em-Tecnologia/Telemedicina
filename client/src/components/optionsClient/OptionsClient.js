@@ -3,12 +3,11 @@ import { Input, Button, Tooltip, Modal, message } from "antd";
 import Phone from "../../assests/phone.gif";
 import Teams from "../../assests/teams.mp3";
 import * as classes from "./Options.module.css";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import VideoContext from "../../context/VideoContext";
 import Hang from "../../assests/hang.svg";
 import {
   UserOutlined,
-  CopyOutlined,
+  BarcodeOutlined,
   InfoCircleOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
@@ -67,35 +66,40 @@ const OptionsClient = () => {
 
   return (
     <div className={classes.options}>
+      <div style={{fontWeight: "lighter"}}>
+        <p>Prezado paciente, favor checar a <b>estabilidade da sua internet</b>, permitir o <b>uso de câmera</b>, <b>som</b>, <b>microfone</b> e estar em um <b>ambiente silencioso</b>.</p>
+      </div>
       <div style={{ marginBottom: "0.5rem" }}>
-        <h2>Nome</h2>
-        <Input
-          size="large"
-          placeholder="Seu nome"
-          prefix={<UserOutlined />}
-          maxLength={15}
-          suffix={<small>{name.length}/15</small>}
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-            localStorage.setItem("name", e.target.value);
-          }}
-          className={classes.inputgroup}
-        />
-        <h2>ID da chamada</h2>
-        <Input
-          placeholder="Id da chamada"
-          size="large"
-          className={classes.inputgroup}
-          value={idToCall}
-          style={{ marginRight: "0.5rem", marginBottom: "0.5rem" }}
-          prefix={<UserOutlined className="site-form-item-icon" />}
-          suffix={
-            <Tooltip title="Id da chamada">
-              <InfoCircleOutlined style={{ color: "rgba(0,0,0,.45)" }} />
-            </Tooltip>
-          }
-        />
+        <div className={classes.field}>
+          <h2>Nome</h2>
+          <Input
+            size="large"
+            placeholder="Seu nome"
+            prefix={<UserOutlined />}
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+              localStorage.setItem("name", e.target.value);
+            }}
+            className={classes.inputgroup}
+          />
+        </div>
+
+        <div className={classes.field}>
+          <h2>ID da chamada</h2>
+          <Input
+            placeholder="Id da chamada"
+            size="large"
+            className={classes.inputgroup}
+            value={idToCall}
+            prefix={<BarcodeOutlined className="site-form-item-icon" />}
+            suffix={
+              <Tooltip title="Id da chamada">
+                <InfoCircleOutlined style={{ color: "rgba(0,0,0,.45)" }} />
+              </Tooltip>
+            }
+          />
+        </div>
 
         {callAccepted && !callEnded ? (
           <Button

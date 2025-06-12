@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import Peer from "simple-peer";
 import { message } from "antd";
 
-const SERVER_URL = "http://localhost:5000/";
+const SERVER_URL = process.env.REACT_APP_WS_URL || "http://localhost:5000/";
 
 export const socket = io(SERVER_URL);
 

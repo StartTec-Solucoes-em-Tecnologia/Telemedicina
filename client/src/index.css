@@ -1,9 +1,11 @@
 @font-face {
   font-family: Gilroy;
+  font-weight: bold;
   src: url(./assests/gilroy.otf);
 }
 @font-face {
-  font-family: gilroy-light;
+  font-family: Gilroy;
+  font-weight: normal;
   src: url(./assests/Gilroy-Light.otf);
 }
 *,
@@ -19,13 +21,20 @@ body {
   background-color: #fff !important;
 }
 
-.logo {
-  position: absolute;
-  left: 45vw;
-}
-@media (max-width: 600px) {
-  .logo {
-    left:40vw
-  }
+b, strong {
+  font-weight: bold !important;
 }
 
+.logo {
+  padding: 0 1rem;
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .logo {
+    text-align: center;
+    height: 60px;
+  }
+}
+.logo img {
+  height: 100%;
+}
